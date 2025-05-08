@@ -1,0 +1,436 @@
+  /* RESET ET STYLES DE BASE */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* SECTION 2: HEADER */
+.header {
+    height: 100vh;
+    background: linear-gradient(rgba(13, 71, 161, 0.8), rgba(13, 71, 161, 0.8)), url('../images/accueil/11.png') center/cover no-repeat;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding-top: 76px; /* Hauteur de la navbar pour éviter de cacher le contenu */
+
+}
+
+.header-content {
+    max-width: 600px;
+    padding-top: 80px;
+}
+
+.header-content h1 {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.header-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+/* Styles pour le contenu extensible */
+.expandable-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    opacity: 0;
+    margin-bottom: 0;
+}
+
+.expandable-content.expanded {
+    max-height: 500px; /* Hauteur maximale lorsque déplié */
+    opacity: 1;
+    margin-bottom: 20px;
+}
+
+/* Style pour le bouton */
+.toggle-button {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.toggle-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.toggle-button.active {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* SECTION 3: NOTRE MISSION */
+.mission {
+    padding: 100px 0;
+}
+
+.mission .container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.mission-title {
+    flex: 1;
+}
+
+.mission-title h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #0d47a1;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.mission-title h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    height: 3px;
+    background-color: #0d47a1;
+}
+
+.mission-content {
+    flex: 2;
+}
+
+.mission-content p {
+    font-size: 17px;
+    color: #555;
+}
+
+/* SECTION 4: NOTRE VISION - REDESIGN */
+.vision {
+    position: relative;
+    padding: 0;
+    overflow: hidden;
+    background-color: #f9f9f9;
+}
+
+.vision-container {
+    display: flex;
+    min-height: 500px;
+    position: relative;
+}
+
+.vision-image-container {
+    position: absolute;
+    width: 50%; /* Modifié à 50% comme demandé */
+    height: 100%;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
+}
+
+.vision-image {
+    width: 100%;
+    height: 100%;
+    background: url('../images/accueil/vision.jpg') center/cover no-repeat;
+    transform: scale(1.05);
+    transition: transform 0.5s ease;
+}
+
+.vision-image:hover {
+    transform: scale(1.1);
+}
+
+.vision-content-wrapper {
+    width: 100%;
+    padding-left: 47%; /* Ajusté pour maintenir l'espace avec 50% d'image */
+    display: flex;
+    align-items: center;
+}
+
+.vision-content {
+    padding: 80px 0 80px 80px; /* Maintien du padding de 80px à gauche pour l'espace */
+    max-width: 600px;
+}
+
+.vision-content h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #0d47a1;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.vision-content h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    height: 3px;
+    background-color: #0d47a1;
+}
+
+.vision-content p {
+    font-size: 17px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+ /* Section 5: Nos Valeurs */
+ .values-section {
+    padding: 100px 0;
+}
+
+.values-section h2 {
+    text-align: center;
+    font-size: 42px;
+    margin-bottom: 60px;
+    color: #0d47a1;
+}
+
+.values-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.value-card {
+    flex: 1;
+    min-width: 250px;
+    padding: 30px;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.value-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.value-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #f0f7ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.value-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.value-card h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #1a3a6b;
+}
+
+.value-card p {
+    color: #555;
+}
+
+/* SECTION 6: VIDEO - MODIFIED */
+.video-section {
+    padding: 100px 0;
+    background-color: #f9f9f9;
+    text-align: center;
+    }
+
+.video-section h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #0d47a1;
+    margin-bottom: 40px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 15px;
+    }
+
+.video-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: #0d47a1;
+    }
+
+.video-container {
+    width: 100%;
+    max-width: 1200px; /* Increased from 800px to 1200px */
+    margin: 0 auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    padding-top: 45%; /* Modified from 56.25% for a wider aspect ratio */
+    }
+
+.video-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    }
+
+.video-wrapper video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Makes video cover the entire container */
+    }
+
+/* RESPONSIVE DESIGN */
+@media screen and (max-width: 992px) {
+    .mission .container,
+    .vision .container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .mission-title {
+        text-align: center;
+    }
+
+    .mission-title h2::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    /* Vision responsive redesign */
+    .vision-image-container {
+        width: 45%; /* Ajusté pour tablette */
+        clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
+    }
+
+    .vision-content-wrapper {
+        padding-left: 42%; /* Ajusté en conséquence */
+    }
+
+    .vision-content {
+        padding: 60px 0 60px 50px;
+    }
+
+    .video-container {
+        max-width: 95%; /* Adjusted for tablets */
+        padding-top: 50%; /* Slightly taller on smaller screens */
+    }
+
+    .footer .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header-content h1 {
+        font-size: 36px;
+    }
+
+    .video-container {
+        padding-top: 56.25%; /* Return to standard aspect ratio on mobile */
+    }
+
+    /* Vision responsive redesign */
+    .vision-container {
+        flex-direction: column;
+        min-height: auto;
+    }
+
+    .vision-image-container {
+        position: relative;
+        width: 100%;
+        height: 350px;
+        clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    }
+
+    .vision-content-wrapper {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .vision-content {
+        padding: 40px 20px;
+        max-width: none;
+    }
+    /* Ajustement du logo sur mobile */
+    .logo img {
+        height: 40px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .header-content {
+        text-align: center;
+    }
+    
+    /* Vision responsive redesign */
+    .vision-image-container {
+        height: 250px;
+        clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+    }
+
+    .vision-content {
+        padding: 30px 20px;
+    }
+
+    .vision-content h2 {
+        text-align: center;
+    }
+
+    .vision-content h2::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    /* Ajustement du logo sur mobile petit écran */
+    .logo img {
+        height: 35px;
+    }
+}
