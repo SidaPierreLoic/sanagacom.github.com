@@ -1,0 +1,238 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/png" href="./Assets/images/Logo Sanaga1.png">
+    <link rel="shortcut icon" href="./Assets/images/Logo Sanaga1.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gilda+Display&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Manrope&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gilda+Display&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Manrope:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href=".\Assets\css\style.css">
+    <link rel="stylesheet" href=".\Assets\css\Navigationbar.css">
+    <link rel="stylesheet" href=".\Assets\css\footer.css">
+    <link rel="stylesheet" href=".\Assets\css\accueil.css">
+    <script src="./Assets/js/Navigationbar.js"></script>
+    <script src="./Assets/js/Accueil/header.js"></script> 
+    <script src="./Assets/js/Accueil/video-controls.js"></script>
+    <title>Sanaga Communications</title>
+</head>
+<body>
+    <!-- SECTION 1: BARRE DE NAVIGATION -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><img src="./Assets/images/Logo Sanaga1.png" alt="Sanaga Communications"></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active-link">Qui nous sommes</a></li>
+                <li><a href="expertise.html">Expertises</a></li>
+                <li><a href="references.html">Références</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Overlay/backdrop pour mobile -->
+    <div class="backdrop"></div>
+
+
+    <!-- SECTION 2: HEADER -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <h1>Hello, nous sommes SANAGA COMMUNICATIONS !</h1>
+                <!-- Premier paragraphe toujours visible -->
+                <p>Nous aidons les organisations à mettre en place des dispositifs pour le renforcement de leur image institutionnelle.</p>
+                
+                <!-- Contenu masqué par défaut -->
+                <div class="expandable-content" id="expandableContent">
+                    <p>Fondée en 2012, nous sommes une société spécialisée dans la communication corporate et la production audiovisuelle. <br>
+                        Notre ambition, c’est de donner forme  à vos rêves et de dire à la fois votre savoir-faire et votre savoir-être. 
+                        La communication c’est d’abord une histoire d’écoute. Nous vous accompagnons dans l’écoute de votre environnement,  et de vos publics externes et internes, en mettant en valeur la grande part d’humanité qui réside en chacune et chacun.
+                    </p>
+                </div>
+                
+                <!-- Bouton pour ouvrir/fermer le contenu -->
+                <button class="toggle-button" id="toggleButton">En savoir plus</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- SECTION 3: NOTRE MISSION -->
+    <section class="mission" id="about">
+        <div class="container">
+            <div class="mission-title">
+                <h2>Notre vision</h2>
+            </div>
+            <div class="mission-content">
+                <p>Nous envisageons un monde où la communication transcende les barrières, où chaque message est transmis avec clarté et résonne avec authenticité. Notre vision est d'être à l'avant-garde de cette transformation, en redéfinissant les normes d'excellence en matière de communication d'entreprise.</p>
+                <p> <br></p>
+                <p>En intégrant les dernières technologies et tendances dans nos stratégies, nous préparons nos clients pour l'avenir de la communication. Nous aspirons à créer un écosystème où les entreprises peuvent prospérer grâce à des connexions significatives avec leurs publics, favorisant ainsi une croissance durable et un impact positif sur la société.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: NOTRE VISION - REDESIGNED -->
+    <section class="vision" id="domain">
+        <div class="vision-container">
+            <div class="vision-image-container">
+                <div class="vision-image"></div>
+            </div>
+            <div class="vision-content-wrapper">
+                <div class="vision-content">
+                    <h2>Notre mission</h2>
+                    <p>Nous cherchons à transformer la façon dont les entreprises communiquent en leur fournissant des stratégies de communication sur mesure qui amplifient leur message et renforcent leur marque. Notre approche intégrée combine expertise, créativité et technologie pour créer des solutions de communication qui génèrent des résultats tangibles.</p>
+                    <p>Nous croyons que chaque entreprise a une histoire unique à raconter, et notre mission est de vous aider à la partager avec le monde de la manière la plus impactante possible. Nous travaillons en étroite collaboration avec vous pour comprendre vos objectifs et développer des stratégies qui vous permettent de vous démarquer dans un paysage médiatique en constante évolution.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Nos Valeurs -->
+    <section class="values-section">
+        <div class="container">
+            <h2>Nos valeurs</h2>
+            <div class="values-container">
+                <div class="value-card">
+                    <div class="value-image">
+                        <img src="./Assets/images/accueil/icons/creativity.svg" alt="Image représentant la créativité">
+                    </div>
+                    <h3>CRÉATIVITÉ</h3>
+                    <p>Innover pour des solutions uniques.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-image">
+                        <img src="./Assets/images/accueil/icons/flexibility.svg" alt="Image représentant la flexibilité">
+                    </div>
+                    <h3>FLEXIBILITÉ</h3>
+                    <p>S'adapter à chaque projet avec agilité.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-image">
+                        <img src="./Assets/images/accueil/icons/integrity.svg" alt="Image représentant l'intégrité">
+                    </div>
+                    <h3>INTÉGRITÉ</h3>
+                    <p>Transparence et éthique en toute circonstance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- SECTION 6: VIDEO - MODIFIED -->
+    <section class="video-section" id="services">
+        <div class="container">
+            <h2>Notre carte d'identité</h2>
+            <div class="video-container">
+                <div class="video-wrapper">
+                    <video id="corporateVideo" playsinline loop>
+                        <source src="./Assets/video/spot 2.webm" type="video/webm">
+                        <source src="./Assets/video/spot.mp4" type="video/mp4">
+                        <source src="corporate-video.ogv" type="video/ogg">
+                        Votre navigateur ne prend pas en charge la lecture de vidéos.
+                    </video>
+                    <div class="video-controls-wrapper">
+                        <!-- Barre de progression -->
+                        <div class="video-progress-container" id="progressContainer">
+                            <div class="video-progress-bar">
+                                <div class="video-progress-buffered" id="progressBuffered"></div>
+                                <div class="video-progress-filled" id="progressFilled"></div>
+                            </div>
+                        </div>
+                        
+                        <!-- Boutons de contrôle -->
+                        <div class="video-controls-buttons">
+                            <div class="play-pause-icon" id="playPauseBtn" aria-label="Lecture/Pause">
+                                <svg viewBox="0 0 24 24" id="playPauseSvg">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </div>
+                            <div class="volume-icon" id="volumeIcon" aria-label="Contrôle du volume">
+                                <svg viewBox="0 0 24 24" id="volumeSvg">
+                                    <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+                                </svg>
+                            </div>
+                            <input type="range" class="volume-slider" id="volumeSlider" min="0" max="1" step="0.1" value="0.7" aria-label="Volume">
+                            <div class="video-time-display" id="timeDisplay">0:00 / 0:00</div>
+                            <div class="fullscreen-icon" id="fullscreenBtn" aria-label="Plein écran">
+                                <svg viewBox="0 0 24 24" id="fullscreenSvg">
+                                    <path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- SECTION 7: FOUNDER SECTION -->
+    <section class="founder-section">
+        <div class="container founder-container">
+            <div class="founder-image">
+                <img src="./Assets/images/accueil/fondateur.jpg" alt="Portrait du fondateur">
+            </div>
+            <div class="founder-bio">
+                <h2>Jean Claude Ottou</h2>
+                <h3>Fondateur & Gérant</h3>
+                <p>Sanaga Communications est dirigé par son fondateur, Jean Claude Ottou qui affiche une expérience professionnelle de plus de trente ans comme journaliste et expert en communication.</p>
+                <p>Diplômé de la troisième promotion de l’Ecole Supérieure Internationale de Journalisme de Yaoundé, il débute sa carrière professionnelle à la radio nationale camerounaise, où il occupera notamment les postes de Chef de service des Reportages et de Rédacteur-en-Chef.</p>
+                <p>Il interviewe plusieurs personnalités : Deng Xiao Ping, Valéry Giscard d’Estaing, François Mitterand, Margaret Thatcher, Amadou Mahtar M’bow, Léopold Sédar Senghor, le roi Juan Carlos d’Espagne, Nicolae Ceausescu, Omar Bongo Odimba, Ahmadou Ahidjo etc. Présentateur vedette du journal parlé, c’est lui qui annonce la démission du Président Ahmadou Ahidjo le 4 novembre 1982.</p>
+                <p>A partir de 1983, il est tour à tour Conseiller en communication à la Société Nationale des Eaux du Cameroun, Correspondant de TV5 Afrique au Cameroun, Producteur de télévision free-lance.<br> En 2001, il rejoint la filiale camerounaise de l’opérateur de téléphonie mobile sud-africain MTN en qualité de Directeur de la Communication et des Affaires publiques. De 2004 à 2011, il est Directeur Général Adjoint, cumulativement avec ses fonctions de Directeur de la Communication et de Secrétaire Exécutif de la Fondation MTN. Il est membre du Conseil National de la Communication de 2013 à 2021.</p>
+            </div>
+        </div>
+    </section>
+
+
+       <!-- SECTION 8: FOOTER -->
+       <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Contactez-nous</h3>
+                <ul class="footer-links">
+                    <li><a href="mailto:j.ottou@sanagacom.com">j.ottou@sanagacom.com</a></li>
+                    <li><a href="tel:+237677221144">+237 6 77 22 11 44</a></li>
+                    <li>Borne 10 Odza Messamendongo<br>Yaoundé, Cameroun</li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Navigation</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Qui nous sommes</a></li>
+                    <li><a href="expertise.html">Expertises</a></li>
+                    <li><a href="references.html">Références</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Suivez-nous</h3>
+                <p>Restez informés de nos dernières actualités et projets</p>
+                <div class="social-links">
+                    <a href="#" class="social-icon">FB</a>
+                    <a href="#" class="social-icon">IN</a>
+                    <a href="#" class="social-icon">TW</a>
+                    <a href="#" class="social-icon">IG</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; 2025 Sanaga Communications. Tous droits réservés.</p>
+        </div>
+    </footer>
+</body>
+</html>
