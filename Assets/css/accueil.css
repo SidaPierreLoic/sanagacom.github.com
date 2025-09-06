@@ -1,0 +1,756 @@
+  /* RESET ET STYLES DE BASE */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Variables */
+:root {
+    --primary-color: #0a3d62;
+    --secondary-color: #3498db;
+    --light-color: #f8f9fa;
+    --dark-color: #2c3e50;
+    --accent-color: #e67e22;
+    --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.navbar {
+    z-index: 10000;
+}
+
+.backdrop {
+    z-index: 9999;
+}
+
+
+/* SECTION 2: HEADER */
+.header {
+    height: 100vh;
+    background: linear-gradient(rgba(13, 71, 161, 0.8), rgba(13, 71, 161, 0.8)), url('../images/accueil/bg-header.png') center/cover no-repeat;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding-top: 76px; /* Hauteur de la navbar pour éviter de cacher le contenu */
+
+}
+
+.header-content {
+    max-width: 600px;
+    padding-top: 80px;
+}
+
+.header-content h1 {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.header-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    text-align: left;
+
+}
+.btn {
+    display: inline-block;
+    background-color: transparent /*white*/;
+    color: white #0d47a1;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-weight: 300;
+    transition: all 0.3s ease;
+    border: 2px solid white;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(13, 71, 161, 0.3);
+}
+/* SECTION 3: NOS DOMAINES D'ACTIVITÉ */
+.activity-domains {
+    padding: 100px 0;
+    background-color: white;
+}
+
+.activity-domains h2 {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    color: #0d47a1;
+    margin-bottom: 60px;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    padding-bottom: 15px;
+}
+
+.activity-domains h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: #0d47a1;
+}
+
+.domains-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 50px;
+}
+
+.domain-card {
+    flex: 1;
+    max-width: 500px;
+    padding: 50px 40px;
+    border-radius: 15px;
+    background: white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    text-align: center;
+    border: 1px solid rgba(13, 71, 161, 0.1);
+}
+
+.domain-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(13, 71, 161, 0.15);
+    border-color: rgba(13, 71, 161, 0.3);
+}
+
+.domain-icon {
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(135deg, #0d47a1, #1976d2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 30px;
+    transition: all 0.3s ease;
+}
+
+.domain-icon img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+}
+
+.domain-card:hover .domain-icon {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(13, 71, 161, 0.3);
+}
+
+.domain-card h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #0d47a1;
+    margin-bottom: 15px;
+}
+
+.domain-card p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.domains-cta {
+    text-align: center;
+}
+
+/* Bouton de la section 'Nos domaines' */
+.btn-domain {
+    display: inline-block;
+    background-color: #0d47a1;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+.btn-domain:hover {
+    background-color: #0b3d91;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(13, 71, 161, 0.3);
+
+    /*color:#0b3d91;
+    background-color: white;*/
+}
+
+
+/* SECTION 4: VIDEO - MODIFIED */
+.video-section {
+    padding: 100px 0;
+    background-color: #f9f9f9;
+    text-align: center;
+    }
+
+.video-section h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #0d47a1;
+    margin-bottom: 40px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 15px;
+    }
+
+.video-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: #0d47a1;
+    }
+
+.video-container {
+    width: 100%;
+    max-width: 1200px; /* Increased from 800px to 1200px */
+    margin: 0 auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    padding-top: 45%; /* Modified from 56.25% for a wider aspect ratio */
+    }
+
+.video-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    }
+
+.video-wrapper video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Makes video cover the entire container */
+    }
+
+/* Styles pour contrôles de la vidéo */
+.video-controls-wrapper {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 100;
+}
+
+.video-wrapper:hover .video-controls-wrapper {
+    opacity: 1;
+}
+
+/* Barre de progression de la vidéo */
+.video-progress-container {
+    width: 100%;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.video-progress-bar {
+    width: 100%;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 3px;
+    position: relative;
+    overflow: hidden;
+}
+
+.video-progress-filled {
+    height: 100%;
+    background: #0d47a1;
+    width: 0%;
+    transition: width 0.1s ease;
+    border-radius: 3px;
+}
+
+.video-progress-buffered {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    width: 0%;
+    border-radius: 3px;
+}
+
+/* Conteneur des boutons de contrôle */
+.video-controls-buttons {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+/* Styles pour le mode plein écran */
+.video-container:fullscreen {
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.video-container:-webkit-full-screen {
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.video-container:-moz-full-screen {
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.video-container:-ms-fullscreen {
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Contrôles toujours visibles en mode plein écran */
+.video-container:fullscreen .video-controls-wrapper,
+.video-container:-webkit-full-screen .video-controls-wrapper,
+.video-container:-moz-full-screen .video-controls-wrapper,
+.video-container:-ms-fullscreen .video-controls-wrapper {
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 15px;
+}
+
+/* Ajustement de la vidéo en mode plein écran */
+.video-container:fullscreen .video-wrapper,
+.video-container:-webkit-full-screen .video-wrapper,
+.video-container:-moz-full-screen .video-wrapper,
+.video-container:-ms-fullscreen .video-wrapper {
+    position: static;
+    width: 100%;
+    height: 100%;
+}
+
+.video-container:fullscreen .video-wrapper video,
+.video-container:-webkit-full-screen .video-wrapper video,
+.video-container:-moz-full-screen .video-wrapper video,
+.video-container:-ms-fullscreen .video-wrapper video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Barre de progression plus visible en plein écran */
+.video-container:fullscreen .video-progress-bar,
+.video-container:-webkit-full-screen .video-progress-bar,
+.video-container:-moz-full-screen .video-progress-bar,
+.video-container:-ms-fullscreen .video-progress-bar {
+    height: 8px;
+}
+
+/* Affichage du temps */
+.video-time-display {
+    color: white;
+    font-size: 14px;
+    margin-left: 10px;
+    margin-right: 10px;
+    min-width: 80px;
+    text-align: center;
+}
+
+.video-container:fullscreen .video-time-display,
+.video-container:-webkit-full-screen .video-time-display,
+.video-container:-moz-full-screen .video-time-display,
+.video-container:-ms-fullscreen .video-time-display {
+    font-size: 16px;
+}
+
+/* Nouveau style pour le conteneur de l'icône play/pause */
+.play-pause-icon {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.play-pause-icon svg {
+    width: 100%;
+    height: 100%;
+    fill: white;
+}
+
+/* Nouveau style pour le conteneur de l'icône volume */
+.volume-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.volume-icon svg {
+    width: 100%;
+    height: 100%;
+    fill: white;
+}
+
+.volume-slider {
+    width: 80px;
+    margin-right: 15px;
+}
+
+/* Nouveau style pour le conteneur de l'icône plein écran */
+.fullscreen-icon {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fullscreen-icon svg {
+    width: 100%;
+    height: 100%;
+    fill: white;
+}
+
+/* Style spécifique pour le masquage automatique sur mobile */
+.video-controls-wrapper.auto-hide {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+}
+
+.video-controls-wrapper.auto-hide.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+/* SECTION 5: SLOGAN */
+.slogan-section {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.slogan-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="%23000" opacity="0.02"/><circle cx="75" cy="75" r="1" fill="%23000" opacity="0.02"/><circle cx="50" cy="10" r="1" fill="%23000" opacity="0.02"/><circle cx="10" cy="50" r="1" fill="%23000" opacity="0.02"/><circle cx="90" cy="30" r="1" fill="%23000" opacity="0.02"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>') repeat;
+    pointer-events: none;
+}
+
+.slogan-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.slogan-text {
+    font-family: 'Gilda Display', serif;
+    font-size: 50px;
+    line-height: 1.4;
+    color: #2c3e50;
+    font-style: italic;
+    position: relative;
+    display: inline-block;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 10px; /* ajouter de l'espace entre la phrase et les guillemets*/
+}
+
+.slogan-text::before {
+    content: '"';
+    font-size: 100px;
+    color: #0d47a1;
+    position: absolute;
+    left: -40px;
+    top: -20px;
+    font-family: 'Times New Roman', serif;
+    opacity: 0.7;
+}
+
+.slogan-text::after {
+    content: '"';
+    font-size: 100px;
+    color: #0d47a1;
+    position: absolute;
+    right: -40px;
+    bottom: -40px;
+    font-family: 'Times New Roman', serif;
+    opacity: 0.7;
+}
+
+
+/* RESPONSIVE DESIGN */
+@media screen and (max-width: 992px) {
+
+    /* Assurer que la navbar et son backdrop soient au-dessus des contrôles vidéo */
+    .navbar {
+        z-index: 10000;
+    }
+    
+    .backdrop {
+        z-index: 9999;
+    }
+
+    .video-container {
+        max-width: 95%; /* Adjusted for tablets */
+        padding-top: 50%; /* Slightly taller on smaller screens */
+    }
+
+    .footer .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* Nos domaines d'activité - Passer de centré à gauche */
+    .activity-domains h2 {
+        text-align: left;
+        display: block;
+    }
+
+    .activity-domains h2::after {
+        left: 0;
+        transform: none;
+    }
+
+    /* Notre carte d'identité - Passer de centré à gauche */
+    .video-section {
+        text-align: left;
+    }
+
+    .video-section h2 {
+        text-align: left;
+        display: block;
+    }
+
+    .video-section h2::after {
+        left: 0;
+        transform: none;
+    }
+
+    /* Centrer le conteneur vidéo même si le titre est à gauche */
+    .video-container {
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    /* Assurer que la navbar et son backdrop soient au-dessus des contrôles vidéo */
+    .navbar {
+        z-index: 10000;
+    }
+    
+    .backdrop {
+        z-index: 9999;
+    }
+    
+
+    .header-content h1 {
+        font-size: 36px;
+    }
+    /* Modifications pour l'espacement du header en version mobile */
+    .header {
+        min-height: 100vh;
+        height: auto;
+        padding-bottom: 40px;
+    }
+    
+    .toggle-button.active {
+        margin-bottom: 25px;
+    }
+    
+    .expandable-content.expanded {
+        margin-bottom: 25px;
+    }
+
+    .slogan-section {
+        padding: 60px 0;
+    }
+
+    .slogan-text {
+        font-size: 35px;
+        line-height: 1.3;
+        padding: 0 30px;
+    }
+
+    .slogan-text::before {
+        font-size: 55px;
+        left: -20px;
+        top: -15px;
+    }
+
+    .slogan-text::after {
+        font-size: 55px;
+        right: -20px;
+        bottom: -25px;
+    }
+
+    .video-container {
+        padding-top: 56.25%; /* Return to standard aspect ratio on mobile */
+    }
+
+    /* Ajustement du logo sur mobile */
+    .logo img {
+        height: 40px;
+    }
+
+    /* Ajustement des contrôles vidéo pour mobile */
+    .video-controls-wrapper {
+        opacity: 1; /* Toujours visible sur mobile */
+    }
+    
+    
+    .volume-slider {
+        width: 50px;
+    }
+    
+    /* Activation du système de masquage automatique sur mobile */
+    .video-wrapper:hover .video-controls-wrapper {
+        opacity: 1; /* Désactiver le hover sur mobile */
+    }
+
+    /* Découvrez notre expertise - Maintenir à gauche */
+    .video-section {
+        text-align: left;
+    }
+
+    .video-section h2 {
+        text-align: left;
+    }
+
+}
+
+@media screen and (max-width: 576px) {
+
+    /* Assurer que la navbar et son backdrop soient au-dessus des contrôles vidéo */
+    .navbar {
+        z-index: 10000;
+    }
+    
+    .backdrop {
+        z-index: 9999;
+    }
+    
+
+    .header-content {
+        text-align: center;
+    }
+    /* Modifications supplémentaires pour très petits écrans */
+    .header {
+        padding-bottom: 50px;
+    }
+    
+    .expandable-content.expanded {
+        margin-bottom: 30px; 
+    }
+    
+    .toggle-button.active {
+        margin-bottom: 30px;
+    }
+    
+    .expandable-content p {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+    
+    .header-content {
+        padding-top: 100px;
+        padding-bottom: 20px; 
+    }
+
+    /* Ajustement du logo sur mobile petit écran */
+    .logo img {
+        height: 35px;
+    }
+
+    /* Ajustement des contrôles vidéo pour très petits écrans */
+    .volume-slider {
+        width: 40px;
+    }
+    
+}
+
+@media screen and (max-width: 480px) {
+    .slogan-section {
+        padding: 50px 0;
+    }
+
+    .slogan-text {
+        font-size: 30px;
+        padding: 0 10px;
+    }
+
+    .slogan-text::before {
+        font-size: 50px;
+        left: -15px;
+        top: -10px;
+    }
+
+        .slogan-text::after {
+        font-size: 50px;
+        right: -15px;
+        bottom: -20px;
+        }
+}

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" fill="none" viewBox="0 0 96 96" id="newspaper">
+  <path stroke="#000" stroke-width="5" d="M16.5 86L80.5 86C83.8137 86 86.5 83.3137 86.5 80L86.5 12C86.5 10.3431 85.1569 8.99999 83.5 8.99999L25 8.99999C23.3431 8.99999 22 10.3431 22 12L22 69.3921"></path>
+  <path stroke="#000" stroke-width="5" d="M22 80.5L22 21.0427C22 19.9145 21.0855 19 19.9573 19L13.0427 19C11.9145 19 11 19.9145 11 21.0427L11 80.5C11 83.5376 13.4624 86 16.5 86C19.5376 86 22 83.5376 22 80.5Z"></path>
+  <path stroke="#000" stroke-linecap="round" stroke-width="5" d="M32 19H76M58 56H76M32 56H50M32 65H50M58 65H76M32 74H50M58 74H76"></path>
+  <rect width="44" height="16" x="32" y="30" stroke="#000" stroke-width="5" rx="1"></rect>
+</svg>
